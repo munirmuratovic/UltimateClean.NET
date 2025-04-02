@@ -7,11 +7,11 @@ public interface IRepository<TEntity, TSearchObject>
     where TEntity : Entity
     where TSearchObject : BaseSearchObject
 {
-    Task<TEntity> GetByIdAsync(Guid id);
+    Task<TEntity> GetByIdAsync(uint id);
     Task<List<TEntity>> GetAllAsync();
     Task<List<TEntity>> GetAsync(TSearchObject search);
     Task<TEntity> AddAsync(TEntity entity);
     Task<TEntity> UpdateAsync(TEntity entity);
-    Task DeleteAsync(Guid id);
+    Task DeleteAsync(uint id);
     Task<int> CountAsync(TSearchObject search);
 }

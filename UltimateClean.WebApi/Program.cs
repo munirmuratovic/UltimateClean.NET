@@ -1,9 +1,16 @@
+using UltimateClean.Application;
+using UltimateClean.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add services to the container. (maybe move it outside, in separate file/class)
+builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddPersistenceServices(builder.Configuration);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -16,5 +23,10 @@ if (app.Environment.IsDevelopment())
 
 // app.UseHttpsRedirection();
 
+app.UseRouting();
+
+// app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
