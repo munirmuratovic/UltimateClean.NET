@@ -4,5 +4,5 @@ namespace UltimateClean.Application.Contracts.Services;
 
 public interface IPostService
 {
-    Task<PostDto> GetByIdAsync(uint id);
+    Task<GetPostDto> GetByIdAsync(uint id);
 }

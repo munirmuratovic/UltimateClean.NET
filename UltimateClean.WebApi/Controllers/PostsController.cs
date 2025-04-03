@@ -21,7 +21,7 @@ namespace UltimateClean.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<PostDto> Get(uint id)
+        public async Task<GetPostDto> Get(uint id)
         {
             return await _postService.GetByIdAsync(id);
         }

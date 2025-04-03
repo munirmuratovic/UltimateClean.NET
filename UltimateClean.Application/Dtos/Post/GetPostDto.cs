@@ -2,7 +2,7 @@ using System;
 
 namespace UltimateClean.Application.Dtos;
 
-public class PostDto
+public class GetPostDto
 {
     public string Title { get; set; }
     public string Content { get; set; }
