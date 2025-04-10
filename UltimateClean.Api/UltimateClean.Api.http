@@ -1,0 +1,6 @@
+@UltimateClean.Api_HostAddress = http://localhost:5270
+
+GET {{UltimateClean.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

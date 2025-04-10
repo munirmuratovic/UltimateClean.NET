@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimateClean.Domain", "Ult
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimateClean.Application", "UltimateClean.Application\UltimateClean.Application.csproj", "{F593DCA1-B0B5-4800-9CC7-BD16E03543F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimateClean.WebApi", "UltimateClean.WebApi\UltimateClean.WebApi.csproj", "{B47A3E9A-DF06-4E9A-9923-2B7E1FC542DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimateClean.Api", "UltimateClean.Api\UltimateClean.Api.csproj", "{B47A3E9A-DF06-4E9A-9923-2B7E1FC542DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimateClean.Persistence", "UltimateClean.Persistence\UltimateClean.Persistence.csproj", "{920154FE-8A6A-4EEF-B331-9B91A401F24D}"
 EndProject

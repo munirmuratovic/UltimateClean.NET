@@ -1,7 +1,7 @@
 using UltimateClean.Application;
 using UltimateClean.Persistence;
 
-namespace UltimateClean.WebApi.Configurations;
+namespace UltimateClean.Api.Configurations;
 
 public static class ModuleRegistration
 {

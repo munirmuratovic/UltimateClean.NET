@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using UltimateClean.Application.Contracts.Persistence;
 
-namespace UltimateClean.WebApi.Controllers
+namespace UltimateClean.Api.Controllers
 {
     using System.Threading.Tasks;
     using UltimateClean.Application.Contracts.Services;

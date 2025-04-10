@@ -44,7 +44,7 @@ dotnet run
 
 ## Project Structure
 
-- **/WebApi**: The entry point for the web api application, including controllers and views.
+- **/Api**: The entry point for the web api application, including controllers and views.
 - **/Application**: Handles application-specific logic, such as use cases and DTOs.
 - **/Domain**: Contains domain entities, interfaces, and business logic.
 - **/Infrastructure**: Implements data access, external services, and other infrastructure concerns.
