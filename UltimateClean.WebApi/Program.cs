@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using UltimateClean.Application;
 using UltimateClean.Persistence;
+using UltimateClean.Persistence.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+// ✅ Apply migrations here, before `app.Run()`
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<MyDbContext>();
+    db.Database.Migrate(); // applies pending migrations
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

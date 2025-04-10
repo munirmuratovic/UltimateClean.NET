@@ -25,5 +25,17 @@ namespace UltimateClean.WebApi.Controllers
         {
             return await _postService.GetByIdAsync(id);
         }
+
+        [HttpPost]
+        public async Task Create([FromBody] CreatePostDto postDto)
+        {
+            await _postService.CreateAsync(postDto);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task Delete(uint id)
+        {
+            await _postService.DeleteAsync(id);
+        }
     }
 }

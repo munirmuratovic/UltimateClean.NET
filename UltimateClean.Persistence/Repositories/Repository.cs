@@ -34,14 +34,16 @@ public class Repository<TEntity, TSearchObject>(DbContext context) : IRepository
         return Task.FromResult(query.Count());
     }
 
-    public Task DeleteAsync(uint id)
+    public async Task DeleteAsync(uint id)
     {
-        var entity = _entities.Find(id);
-        if (entity != null)
+        var entity = await _entities.FindAsync(id);
+        if (entity == null)
         {
-            _entities.Remove(entity);
+        throw new KeyNotFoundException($"{typeof(TEntity).Name} with ID {id} was not found.");
         }
-        return Task.CompletedTask;
+
+        _entities.Remove(entity);
+        await context.SaveChangesAsync();
     }
 
     public Task<List<TEntity>> GetAllAsync()

@@ -26,11 +26,11 @@ namespace UltimateClean.Persistence.Configurations
                 .IsRequired();
 
             builder.Property(p => p.CreatedAt)
-                .IsRequired();
+                .IsRequired()
+                .ValueGeneratedOnAdd();
 
             builder.Property(p => p.UpdatedAt)
-                .IsRequired()
-                .ValueGeneratedOnAddOrUpdate();
+                .ValueGeneratedOnUpdate();
         }
     }
 }

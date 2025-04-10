@@ -12,8 +12,8 @@ using UltimateClean.Persistence.Data;
 namespace UltimateClean.Persistence.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250401220512_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250410185930_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,7 @@ namespace UltimateClean.Persistence.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
@@ -46,7 +47,7 @@ namespace UltimateClean.Persistence.Migrations
                         .HasColumnType("character varying(100)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
+                        .ValueGeneratedOnUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
